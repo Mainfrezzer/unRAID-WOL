@@ -1,0 +1,6 @@
+Menu="NetworkServices"
+Icon="bell"
+Title="Wake On Lan"
+Type="xmenu"
+Tabs="true"
+---
