@@ -250,7 +250,7 @@ function slideRow(par) {
 function Wake(){
     var par = $(this).parent()
     var tdStatus = par.children('td:nth-child(1)');
-    var ipAddress = $(tr).children('td:nth-child(3)').html();
+    var ipAddress = par.children('td:nth-child(3)').html();
     var macAddress = par.children('td:nth-child(4)').html();
     tdStatus.html('<i class="fa orb green-orb fa-refresh fa-spin"></i>');
     $.post('/plugins/m-wakeonlan/include/wake.php', {mac: macAddress, ip: ipAddress, ifname: "<?=htmlspecialchars($ifname);?>"}, function() {
