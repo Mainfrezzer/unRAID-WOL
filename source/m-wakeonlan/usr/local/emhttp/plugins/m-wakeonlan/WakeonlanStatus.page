@@ -252,7 +252,7 @@ function Wake(){
     var tdStatus = par.children('td:nth-child(1)');
     var macAddress = par.children('td:nth-child(4)').html();
     tdStatus.html('<i class="fa orb green-orb fa-refresh fa-spin"></i>');
-    $.post('/plugins/m-wakeonlan/include/wake.php', {mac: macAddress, ifname: "<?=htmlspecialchars($ifname);?>"}, function() {
+    $.post('/plugins/m-wakeonlan/include/wake.php', {mac: macAddress, ip: ipAddress, ifname: "<?=htmlspecialchars($ifname);?>"}, function() {
           setTimeout(ScanIP, 9999);
     });
 }
