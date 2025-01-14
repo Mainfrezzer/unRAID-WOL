@@ -171,7 +171,7 @@ echo "-----------------------------------------------------------"
 echo ""
 </INLINE>
 </FILE>
-
+<!--
 The 'remove' script.
 -->
 <FILE Run="/bin/bash" Method="remove">
