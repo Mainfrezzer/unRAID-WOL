@@ -3,7 +3,7 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "m-wakeonlan">
 <!ENTITY author    "Mainfrezzer">
-<!ENTITY version   "2025.01.09b">
+<!ENTITY version   "2025.04.05">
 <!ENTITY launch    "Settings/Wakeonlan">
 <!ENTITY gitURL    "https://raw.githubusercontent.com/&author;/unRAID-WOL/master">
 <!ENTITY pluginURL "&gitURL;/plugin/&name;.plg">
@@ -17,6 +17,8 @@
 
 <CHANGES>
 ##&name;
+###2025.04.05
+Fixed readme, changed link in case someone actually needs help with this by chance
 ###2025.01.09b
 - ups, fixing my forgetfulness
 ###2025.01.09
