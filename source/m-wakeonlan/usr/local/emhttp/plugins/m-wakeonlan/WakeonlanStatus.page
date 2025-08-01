@@ -37,7 +37,7 @@ table.tablesorter tbody tr:nth-child(even) {
 <form markdown="1">
 
 &nbsp;
-: <button type="button" id="btnNew"/>new</button><button type="button" id="btnDone" onclick="done();"/>Done</button>
+: <div class="btn-grp"><button type="button" id="btnNew"/>new</button><button type="button" id="btnDone" onclick="done();"/>Done</button></div>
 </form>
 
 <script src="/plugins/m-wakeonlan/js/jquery.tablesorter.combined.min.js"></script>

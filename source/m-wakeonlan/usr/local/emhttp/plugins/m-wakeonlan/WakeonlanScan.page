@@ -17,7 +17,7 @@ Tag="search"
 </table>
 
 &nbsp;
-: <button type="button" id="btnScan"/>scan</button><button type="button" id="btnClear"/>Clear</button>
+: <div class="btn-grp"><button type="button" id="btnScan"/>scan</button><button type="button" id="btnClear"/>Clear</button></div>
 </form>
 
 <div id="preload" style="display: none;">
