@@ -2,6 +2,7 @@
 
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "m-wakeonlan">
+<!ENTITY rname      "Wake on Lan">
 <!ENTITY author    "Mainfrezzer">
 <!ENTITY version   "2025.08.01">
 <!ENTITY launch    "Settings/Wakeonlan">
@@ -16,7 +17,7 @@
 <PLUGIN name="&name;" author="&author;" launch="&launch;" version="&version;" pluginURL="&pluginURL;">
 
 <CHANGES>
-##&name;
+##&rname;
 ###2025.08.01
 Fix nmap on Unraid 7
 ###2025.04.05
