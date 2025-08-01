@@ -3,7 +3,7 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "m-wakeonlan">
 <!ENTITY author    "Mainfrezzer">
-<!ENTITY version   "2025.04.05">
+<!ENTITY version   "2025.08.01">
 <!ENTITY launch    "Settings/Wakeonlan">
 <!ENTITY gitURL    "https://raw.githubusercontent.com/&author;/unRAID-WOL/master">
 <!ENTITY pluginURL "&gitURL;/plugin/&name;.plg">
@@ -17,6 +17,8 @@
 
 <CHANGES>
 ##&name;
+###2025.08.01
+Fix nmap on Unraid 7
 ###2025.04.05
 Fixed readme, changed link in case someone actually needs help with this by chance
 ###2025.01.09b
@@ -100,6 +102,17 @@ This plugin uses etherwake for wake on lan
 <FILE Name="&plgPATH;/libnl-1.1.4-x86_64-2.txz" Min="6.1" Run="upgradepkg --install-new">
 <URL>&pkgURL;/libnl-1.1.4-x86_64-2.txz</URL>
 <MD5>d84d8545760ed7d71bce77b7ef5a86aa</MD5>
+</FILE>
+
+
+<FILE Name="&plgPATH;/lua-5.4.8-x86_64-1.txz" Min="7.0" Run="upgradepkg --install-new">
+<URL>&pkgURL;/lua-5.4.8-x86_64-1.txz</URL>
+<MD5>b15da729186f4dc2b6543e63d86cda35</MD5>
+</FILE>
+
+<FILE Name="&plgPATH;/nmap-7.97-x86_64-1.txz" Min="7.0" Run="upgradepkg --install-new">
+<URL>&pkgURL;/nmap-7.97-x86_64-1.txz</URL>
+<MD5>40bda51a02734dcfc79f5550e9d7f631</MD5>
 </FILE>
 
 <FILE Name="&plgPATH;/nmap-7.80-x86_64-3.txz" Min="6.7" Run="upgradepkg --install-new">
