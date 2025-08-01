@@ -100,7 +100,7 @@ This plugin uses etherwake for wake on lan
 <MD5>0b65b7b7ac2262f1a9b998cbb9f913e2</MD5>
 </FILE>
 
-<FILE Name="&plgPATH;/libnl-1.1.4-x86_64-2.txz" Min="6.1" Run="upgradepkg --install-new">
+<FILE Name="&plgPATH;/libnl-1.1.4-x86_64-2.txz" Min="6.1" Max="6.12.15" Run="upgradepkg --install-new">
 <URL>&pkgURL;/libnl-1.1.4-x86_64-2.txz</URL>
 <MD5>d84d8545760ed7d71bce77b7ef5a86aa</MD5>
 </FILE>
@@ -116,7 +116,7 @@ This plugin uses etherwake for wake on lan
 <MD5>40bda51a02734dcfc79f5550e9d7f631</MD5>
 </FILE>
 
-<FILE Name="&plgPATH;/nmap-7.80-x86_64-3.txz" Min="6.7" Run="upgradepkg --install-new">
+<FILE Name="&plgPATH;/nmap-7.80-x86_64-3.txz" Min="6.7" Max="6.12.15" Run="upgradepkg --install-new">
 <URL>&pkgURL;/nmap-7.80-x86_64-3.txz</URL>
 <MD5>ba87afc200890097c7fc95345370725c</MD5>
 </FILE>
