@@ -19,9 +19,9 @@
 <CHANGES>
 ##&rname;
 ###2025.08.01
-Fix nmap on Unraid 7
+- Fix nmap on Unraid 7
 ###2025.04.05
-Fixed readme, changed link in case someone actually needs help with this by chance
+- Fixed readme, changed link in case someone actually needs help with this by chance
 ###2025.01.09b
 - ups, fixing my forgetfulness
 ###2025.01.09
