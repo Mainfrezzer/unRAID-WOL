@@ -142,6 +142,9 @@ $(function(){
 });
 
 function addRow(hostName, ipAddress, macAddress) {
+    if (macAddress.includes('<') || macAddress.includes('>')) {
+        return; # Dont display the bogus rows
+    }
     var macID = macAddress.replace(/:/g,'');
     $('#tblData tbody').append('<tr id="'+macID+'">'+
     '<td class="wake" title="click to wake host"><i class="fa orb grey-orb fa-refresh fa-spin"></i></td>'+
