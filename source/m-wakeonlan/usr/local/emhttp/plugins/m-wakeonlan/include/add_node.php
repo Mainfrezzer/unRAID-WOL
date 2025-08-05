@@ -6,7 +6,9 @@ else
     $xml = new SimpleXMLElement('<?xml version="1.0"?>'.
     '<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>'.
     '<hosts/>');
-
+if (!preg_match('/^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$/', $_POST['mac'])) {
+    die("We dont save html code");
+}
 $ip   = htmlspecialchars($_POST['ip']);
 $mac  = htmlspecialchars($_POST['mac']);
 $name = htmlspecialchars($_POST['name']);
