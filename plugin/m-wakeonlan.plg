@@ -4,7 +4,7 @@
 <!ENTITY name      "m-wakeonlan">
 <!ENTITY rname      "Wake on Lan">
 <!ENTITY author    "Mainfrezzer">
-<!ENTITY version   "2025.08.06">
+<!ENTITY version   "2025.08.06a">
 <!ENTITY launch    "Settings/Wakeonlan">
 <!ENTITY gitURL    "https://raw.githubusercontent.com/&author;/unRAID-WOL/master">
 <!ENTITY pluginURL "&gitURL;/plugin/&name;.plg">
