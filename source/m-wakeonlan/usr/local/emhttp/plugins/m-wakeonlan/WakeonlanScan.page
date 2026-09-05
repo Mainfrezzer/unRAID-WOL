@@ -49,11 +49,20 @@ $(function(){
     parseScan();
 });
 
+function esc(s) {
+    // Values from the nmap scan and the saved XML come from the network and
+    // are inserted into the page as HTML; encode them so a hostname cannot
+    // carry markup into the webGui.
+    return String(s).replace(/[&<>"']/g, function(c) {
+        return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c];
+    });
+}
+
 function Add(){
     var tr =$(this);
-    var hostName = tr.children('td:nth-child(1)').html();
-    var ipAddress = tr.children('td:nth-child(2)').html();
-    var macAddress = tr.children('td:nth-child(3)').html();
+    var hostName = tr.children('td:nth-child(1)').text();
+    var ipAddress = tr.children('td:nth-child(2)').text();
+    var macAddress = tr.children('td:nth-child(3)').text();
     $.post('/plugins/m-wakeonlan/include/add_node.php',{name:hostName, ip:ipAddress, mac:macAddress},function () {
             slideRow(tr);
             addRow(hostName, ipAddress, macAddress);
@@ -93,9 +102,9 @@ function parseScan(){
                 // if mac is not saved then add
                 if (macCount == 0) {
                     $("#tblScan tbody").append('<tr class="addRow" title="click to add">'+
-                    '<td>'+hostName+'</td>'+
-                    '<td>'+ipAddress+'</td>'+
-                    '<td>'+macAddress+'</td></tr>');
+                    '<td>'+esc(hostName)+'</td>'+
+                    '<td>'+esc(ipAddress)+'</td>'+
+                    '<td>'+esc(macAddress)+'</td></tr>');
                 }
             });
 
