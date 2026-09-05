@@ -149,6 +149,7 @@ The 'plugin' package file.
 -->
 <FILE Name="&plgPATH;/&plgNAME;.txz">
 <URL>&gitURL;/archive/&plgNAME;.txz</URL>
+<MD5>dd16b407da6642d7a1ed4a38f5c192e2</MD5>
 </FILE>
 
 <!--
@@ -156,6 +157,7 @@ The 'plugin' package MD5 hash.
 -->
 <FILE Name="&plgPATH;/&plgNAME;.md5">
 <URL>&gitURL;/archive/&plgNAME;.md5</URL>
+<MD5>ffdc4e2cd505a2b7f38986ac07679eaf</MD5>
 </FILE>
 
 <!--
