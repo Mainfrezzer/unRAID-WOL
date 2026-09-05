@@ -141,16 +141,25 @@ $(function(){
     parseXML();
 });
 
+function esc(s) {
+    // Values from the nmap scan and the saved XML come from the network and
+    // are inserted into the page as HTML; encode them so a hostname cannot
+    // carry markup into the webGui.
+    return String(s).replace(/[&<>"']/g, function(c) {
+        return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c];
+    });
+}
+
 function addRow(hostName, ipAddress, macAddress) {
     if (macAddress.includes('<') || macAddress.includes('>')) {
         return;
     }
-    var macID = macAddress.replace(/:/g,'');
+    var macID = esc(macAddress.replace(/:/g,''));
     $('#tblData tbody').append('<tr id="'+macID+'">'+
     '<td class="wake" title="click to wake host"><i class="fa orb grey-orb fa-refresh fa-spin"></i></td>'+
-    '<td class="edit hostname" title="double click to edit hostname">'+hostName+'</td>'+
-    '<td class="edit ip-address" title="double click to edit IP address">'+ipAddress+'</td>'+
-    '<td class="edit mac-uppercase mac-address" title="double click to edit mac address">'+macAddress+'</td>'+
+    '<td class="edit hostname" title="double click to edit hostname">'+esc(hostName)+'</td>'+
+    '<td class="edit ip-address" title="double click to edit IP address">'+esc(ipAddress)+'</td>'+
+    '<td class="edit mac-uppercase mac-address" title="double click to edit mac address">'+esc(macAddress)+'</td>'+
     '<td></td>'+
     '<td><a class="delete" title="delete"><i class="fa fa-trash"></i></a></td></tr>');
 }
